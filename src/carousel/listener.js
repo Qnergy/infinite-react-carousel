@@ -34,7 +34,7 @@ export function handleCarouselDrag(e) {
   if (this.pressed) {
     const x = this.xpos(e);
     const y = this.ypos(e);
-    const delta = this.reference - x;
+    const delta = (this.reference - x) * 2;
     const deltaY = Math.abs(this.referenceY - y);
     const direction = getSwipeDirection(Object.assign(this.touchObject, {
       endX: x,
@@ -84,7 +84,7 @@ export function handleCarouselRelease(e) {
   clearInterval(this.ticker);
   this.target = this.offset;
   if (this.velocity > 10 || this.velocity < -10) {
-    this.amplitude = 0.9 * this.velocity;
+    this.amplitude = 0.5 * this.velocity;
     this.target = this.offset + this.amplitude;
   }
   this.target = Math.round(this.target / this.dim) * this.dim;
