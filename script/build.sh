@@ -20,9 +20,9 @@ ASSET_FILES=$(find . -name \*.css)
 for FILE in $ASSET_FILES; do
     DIR_PATH=$(dirname $FILE)
 
-    sudo mkdir -p $LIB/$DIR_PATH
-    sudo cp $FILE $LIB/$FILE
+    mkdir -p $LIB/$DIR_PATH
+    cp $FILE $LIB/$FILE
 
-    sudo mkdir -p $ESM/$DIR_PATH
-    sudo cp $FILE $ESM/$FILE
+    mkdir -p $ESM/$DIR_PATH
+    cp $FILE $ESM/$FILE
 done
