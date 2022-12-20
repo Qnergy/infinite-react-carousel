@@ -3,7 +3,6 @@ TODO.md
 npm-debug.log
 lib
 .idea
-dist
 yarn.lock
 .vscode
 package-lock.json
