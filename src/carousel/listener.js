@@ -213,6 +213,10 @@ export function signupListener() {
     SliderRef.addEventListener('touchstart', this.handleCarouselTap);
     SliderRef.addEventListener('touchmove', this.handleCarouselDrag);
     SliderRef.addEventListener('touchend', this.handleCarouselRelease);
+    SliderRef.addEventListener('mousedown', this.handleCarouselTap);
+    SliderRef.addEventListener('mousemove', this.handleCarouselDrag);
+    SliderRef.addEventListener('mouseup', this.handleCarouselRelease);
+    SliderRef.addEventListener('mouseleave', this.handleCarouselRelease);
   } else {
     SliderRef.removeEventListener('touchstart', this.handleCarouselTap);
     SliderRef.removeEventListener('touchmove', this.handleCarouselDrag);
@@ -228,10 +232,6 @@ export function signupListener() {
   } else {
     SliderRef.removeEventListener('wheel', this.handleWheel);
   }
-  SliderRef.addEventListener('mousedown', this.handleCarouselTap);
-  SliderRef.addEventListener('mousemove', this.handleCarouselDrag);
-  SliderRef.addEventListener('mouseup', this.handleCarouselRelease);
-  SliderRef.addEventListener('mouseleave', this.handleCarouselRelease);
 }
 
 export function removeListener() {
@@ -246,6 +246,10 @@ export function removeListener() {
     SliderRef.removeEventListener('touchstart', this.handleCarouselTap);
     SliderRef.removeEventListener('touchmove', this.handleCarouselDrag);
     SliderRef.removeEventListener('touchend', this.handleCarouselRelease);
+    SliderRef.removeEventListener('mousedown', this.handleCarouselTap);
+    SliderRef.removeEventListener('mousemove', this.handleCarouselDrag);
+    SliderRef.removeEventListener('mouseup', this.handleCarouselRelease);
+    SliderRef.removeEventListener('mouseleave', this.handleCarouselRelease);
   }
   if (accessibility) {
     SliderRef.removeEventListener('keydown', this.handleKeyDown);
@@ -256,8 +260,4 @@ export function removeListener() {
   if (autoplay) {
     window.removeEventListener('visibilitychange', this.handleVisibilityChange);
   }
-  SliderRef.removeEventListener('mousedown', this.handleCarouselTap);
-  SliderRef.removeEventListener('mousemove', this.handleCarouselDrag);
-  SliderRef.removeEventListener('mouseup', this.handleCarouselRelease);
-  SliderRef.removeEventListener('mouseleave', this.handleCarouselRelease);
 }
