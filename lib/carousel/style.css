@@ -194,7 +194,7 @@
   text-align: center;
 
   opacity: .25;
-  color: black;
+  color: #002255;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -202,7 +202,7 @@
 
 .carousel-dots li.carousel-dots-active button:before {
   opacity: .75;
-  color: black;
+  color: #002255;
 }
 
 .Carousel .carousel-initialized.scrolling .CustomArrow {
