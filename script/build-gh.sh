@@ -23,6 +23,6 @@ for FILE in $ASSET_FILES; do
     sudo mkdir -p $LIB/$DIR_PATH
     sudo cp $FILE $LIB/$FILE
 
-    sudo mkdir -p $ESM/$DIR_PATH
-    sudo cp $FILE $ESM/$FILE
+    # sudo mkdir -p $ESM/$DIR_PATH
+    # sudo cp $FILE $ESM/$FILE
 done

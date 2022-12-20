@@ -23,6 +23,6 @@ for FILE in $ASSET_FILES; do
     mkdir -p $LIB/$DIR_PATH
     cp $FILE $LIB/$FILE
 
-    mkdir -p $ESM/$DIR_PATH
-    cp $FILE $ESM/$FILE
+    # mkdir -p $ESM/$DIR_PATH
+    # cp $FILE $ESM/$FILE
 done
