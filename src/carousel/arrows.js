@@ -18,7 +18,7 @@ const Arrow = ({
   };
   const classes = {
     'carousel-arrow': true,
-    block: arrowsBlock,
+    block: false// arrowsBlock,
   };
   const arrowOptions = {
     arrowsScroll
