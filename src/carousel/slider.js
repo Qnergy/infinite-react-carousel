@@ -452,7 +452,7 @@ class Slider extends Component {
       && (type !== 'start' && type !== 'end' && type !== 'init')
     ) {
       this.beforeChangeTrigger = true;
-      let newIndex;
+      let newIndex = this.items.getIndex(activeIndex + dir);
       switch (scrollType) {
         case 'arrows': {
           const slides = settings.arrowsScroll;
