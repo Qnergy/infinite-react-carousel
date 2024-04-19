@@ -27,7 +27,7 @@ import './style.css';
 
 const extractObject = (spec, keys) => {
   const newObject = {};
-  for(let i = 0; i < keys.length; i += 1) {
+  for (let i = 0; i < keys.length; i += 1) {
     const key = keys[i];
     newObject[key] = spec[key];
   }
@@ -452,7 +452,7 @@ class Slider extends Component {
       && (type !== 'start' && type !== 'end' && type !== 'init')
     ) {
       this.beforeChangeTrigger = true;
-      let newIndex = this.items.getIndex(activeIndex + dir);
+      let newIndex = this.items.getIndex(activeIndex - dir);
       switch (scrollType) {
         case 'arrows': {
           const slides = settings.arrowsScroll;
